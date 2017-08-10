@@ -6,8 +6,14 @@ var addWord = function (words, word) {
 
 var markAsUsed = function (used, word) {
   used[word] = true;
-  if (word === 'amp-img') {
+  if (word === 'img') {
     used.img = true;
+  } else if (word === 'amp-form') {
+    used['amp-form-submitting'] = true;
+    used['amp-form-submit-success'] = true;
+    used['amp-form-submit-error'] = true;
+    used['user-valid'] = true;
+    used['user-invalid'] = true;
   } else if (word === 'amp-user-notification' || word === 'amp-live-list') {
     used['amp-active'] = true;
     used['amp-hidden'] = true;
