@@ -278,4 +278,25 @@ describe('purify', function () {
       expect(this.result.indexOf('row:after') > -1).to.equal(false);
     });
   });
+
+  describe('dynamic amp classes', function () {
+    beforeEach(function () {
+      var content = read('amp/amp.html');
+      var css = read('amp/amp.css');
+      this.result = purify(content, css);
+    });
+
+
+    it('finds amp-img css', function () {
+      expect(this.result.indexOf('white') > -1).to.equal(true);
+    });
+
+    it('finds img css', function () {
+      expect(this.result.indexOf('black') > -1).to.equal(true);
+    });
+
+    it('removes not-img', function () {
+      expect(this.result.indexOf('not-img') > -1).to.equal(false);
+    })
+  });
 });

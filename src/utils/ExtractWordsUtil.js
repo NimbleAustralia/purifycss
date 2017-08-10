@@ -4,6 +4,16 @@ var addWord = function (words, word) {
   }
 };
 
+var markAsUsed = function (used, word) {
+  used[word] = true;
+  if (word === 'amp-img') {
+    used.img = true;
+  } else if (word === 'amp-user-notification' || word === 'amp-live-list') {
+    used['amp-active'] = true;
+    used['amp-hidden'] = true;
+  }
+};
+
 var ExtractWordsUtil = {
   getAllWordsInContent: function (content) {
     var used = {
@@ -19,12 +29,12 @@ var ExtractWordsUtil = {
       if (chr.match(/[_a-z0-9-]+/)) {
         word += chr;
       } else {
-        used[word] = true;
+        markAsUsed(used, word);
         word = '';
       }
     }
 
-    used[word] = true;
+    markAsUsed(used, word);
 
     return used;
   },
