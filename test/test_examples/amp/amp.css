@@ -10,3 +10,7 @@ img {
 .not-img {
   color: red;
 }
+
+amp-user-notification.amp-active {
+  color: green;
+}

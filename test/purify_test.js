@@ -291,6 +291,10 @@ describe('purify', function () {
       expect(this.result.indexOf('white') > -1).to.equal(true);
     });
 
+    it('finds amp-active css', function () {
+      expect(this.result.indexOf('amp-active') > -1).to.equal(true);
+    });
+
     it('finds img css', function () {
       expect(this.result.indexOf('black') > -1).to.equal(true);
     });

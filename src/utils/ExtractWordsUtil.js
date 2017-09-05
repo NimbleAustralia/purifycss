@@ -6,7 +6,7 @@ var addWord = function (words, word) {
 
 var markAsUsed = function (used, word) {
   used[word] = true;
-  if (word === 'img') {
+  if (word === 'amp-img') {
     used.img = true;
   } else if (word === 'amp-form') {
     used['amp-form-submitting'] = true;
