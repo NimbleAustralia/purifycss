@@ -1,6 +1,8 @@
 [![Join the chat at https://gitter.im/purifycss/purifycss](https://badges.gitter.im/purifycss/purifycss.svg)](https://gitter.im/purifycss/purifycss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ### PurifyCSS
 
+LOCAL COPY OF PURIFYCSS WITH CHANGES - USED IN STATIC SITE
+
 A function that takes content (HTML/JS/PHP/etc) and CSS, and returns only the **used CSS**.
 
 PurifyCSS does not modify the original CSS files. You can write to a new file, like minification.
